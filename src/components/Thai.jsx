@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Diet(props) {
+function Thai(props) {
     return (
         <div>
-           Diet 
+            Thai
         </div>
     );
 }
 
-export default Diet;
+export default Thai;
