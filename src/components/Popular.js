@@ -1,6 +1,5 @@
 // import React, { useEffect,useState } from 'react';
 
-
 // function Popular(props) {
 
 // const[popular,setPopular]=useState([]);
@@ -8,7 +7,6 @@
 // useEffect(()=> {
 
 // const url =`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_RECIPE_KEY}&number=5`
-
 
 // fetch(url)
 //   .then(res => {
@@ -20,8 +18,7 @@
 //     console.log(err);
 //   });
 //  },[]);
-  
- 
+
 //     return (
 //         <div>
 //             <h1>Trending</h1>
@@ -33,13 +30,10 @@
 // {console.log(recipe.image)}
 //                 </div>
 //             )
-           
+
 //            })}
 //         </div>
 //     );
 // }
-
-
-
 
 // export default Popular;
