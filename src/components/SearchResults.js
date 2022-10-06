@@ -1,8 +1,15 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 
 function SearchResults({ input }) {
 	const [search, setSearch] = useState([]);
+	let params = useParams();
+
+	useEffect(() => {
+		getResult(params.input);
+	}, [params.input]);
+
 	const getResult = () => {
 		const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_RECIPE_KEY}&query=${input}`;
 
@@ -12,26 +19,25 @@ function SearchResults({ input }) {
 			})
 			.then((data) => {
 				setSearch(data.results);
-				console.log(data);
 			})
 			.catch((err) => {
 				console.log(err);
 			});
 	};
-	useEffect(() => {
-		getResult(input);
-	}, []);
+
 	return (
 		<div>
-			{search.map((data) => {
-				return (
-					<div key={data.id}>
-						<h3>{data.title}</h3>
-						<img src={data.image} alt={data.title} />
-						{console.log(data.image)}
-					</div>
-				);
-			})}
+			{search.map((data) => (
+				<div className='resultContainer'>
+					<Link to={`/recipe/${data.id}`}>
+						<div key={data.id}>
+							<h3>{data.title}</h3>
+							<img src={data.image} alt={data.title} />
+							{console.log(data.image)}
+						</div>
+					</Link>
+				</div>
+			))}
 		</div>
 	);
 }

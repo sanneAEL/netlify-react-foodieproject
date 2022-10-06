@@ -9,9 +9,11 @@ import Korean from './Korean';
 import Thai from './Thai';
 import SearchForm from './SearchForm';
 import SearchResults from './SearchResults';
-import Recipe from './Recipe';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Recipe from './Recipe';
+import Home from './Home';
+import CuisineRecipe from './CuisineRecipe';
 
 const Main = () => {
 	const [input, setInput] = useState('');
@@ -64,7 +66,7 @@ const Main = () => {
 			{/* <Popular /> */}
 
 			<Routes>
-				{/* <Route path='/' element={<Main />} /> */}
+				<Route path='/' element={<Home />} />
 				<Route path='/american' element={<American />} />
 				<Route path='/chinese' element={<Chinese />} />
 				<Route path='/french' element={<French />} />
@@ -75,7 +77,8 @@ const Main = () => {
 					path='/searchResults/:input'
 					element={<SearchResults input={input} />}
 				/>
-				<Route path='/recipe/:input' element={<Recipe />} />
+				<Route path='/recipe/:id' element={<Recipe />} />
+				<Route path='/cuisineRecipe/:id' element={<CuisineRecipe />} />
 			</Routes>
 		</>
 	);
