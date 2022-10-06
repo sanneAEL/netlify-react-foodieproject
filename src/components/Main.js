@@ -14,6 +14,7 @@ import { useNavigate } from 'react-router-dom';
 import Recipe from './Recipe';
 import Home from './Home';
 import CuisineRecipe from './CuisineRecipe';
+import './main.css';
 
 const Main = () => {
 	const [input, setInput] = useState('');
@@ -32,7 +33,7 @@ const Main = () => {
 			<nav>
 				<div className='header'>
 					<Link to='/'>
-						<h1>Foodie</h1>
+						<a>🥐Foodie</a>
 					</Link>
 				</div>
 				<ul>
@@ -56,15 +57,14 @@ const Main = () => {
 					</Link>
 				</ul>
 			</nav>
-
-			<SearchForm
-				submitHandler={submitHandler}
-				input={input}
-				changeHandler={changeHandler}
-			/>
-
+			<div className='searchbar'>
+				<SearchForm
+					submitHandler={submitHandler}
+					input={input}
+					changeHandler={changeHandler}
+				/>
+			</div>
 			{/* <Popular /> */}
-
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/american' element={<American />} />

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import './cuisine.css';
 
 function American({}) {
 	const [american, setAmerican] = useState([]);
@@ -17,7 +18,6 @@ function American({}) {
 			})
 			.then((data) => {
 				setAmerican(data.results);
-				console.log(data);
 			})
 			.catch((err) => {
 				console.log(err);
@@ -25,7 +25,7 @@ function American({}) {
 	};
 
 	return (
-		<div>
+		<div className='cuisine'>
 			{american.map((data) => {
 				return (
 					<div className='CuisineContainer'>

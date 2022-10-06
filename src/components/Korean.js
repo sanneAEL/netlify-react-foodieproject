@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import './cuisine.css';
 
 function Korean({}) {
 	const [korean, setKorean] = useState([]);
@@ -17,7 +18,6 @@ function Korean({}) {
 			})
 			.then((data) => {
 				setKorean(data.results);
-				console.log(data);
 			})
 			.catch((err) => {
 				console.log(err);
@@ -25,7 +25,7 @@ function Korean({}) {
 	};
 
 	return (
-		<div>
+		<div className='cuisine'>
 			{korean.map((data) => {
 				return (
 					<div className='CuisineContainer'>

@@ -1,0 +1,11 @@
+div.cuisine {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+div.CuisineContainer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}

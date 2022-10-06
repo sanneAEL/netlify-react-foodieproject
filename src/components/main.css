@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    background: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    
+}
+
+div.header {
+    padding: 10px;
+    text-align: center;
+
+    font-size: 30px;
+
+}
+div.searchbar{
+    text-align: center;
+   padding: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+ul {
+  
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+
+li {
+    
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    padding: 14px 16px;
+}

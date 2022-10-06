@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import './recipe.css';
 
 function SearchResults({ input }) {
 	const [search, setSearch] = useState([]);
@@ -26,14 +27,13 @@ function SearchResults({ input }) {
 	};
 
 	return (
-		<div>
+		<div className='searchResultContainer'>
 			{search.map((data) => (
 				<div className='resultContainer'>
 					<Link to={`/recipe/${data.id}`}>
 						<div key={data.id}>
 							<h3>{data.title}</h3>
 							<img src={data.image} alt={data.title} />
-							{console.log(data.image)}
 						</div>
 					</Link>
 				</div>

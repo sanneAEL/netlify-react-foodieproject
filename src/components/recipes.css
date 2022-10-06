@@ -1,0 +1,19 @@
+div.title{
+    text-align: center;
+    font-size: 30px;
+}
+div.size{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+div.Ingredients{
+  text-align: center;
+    justify-content: center;
+    font-size: 15px;
+}
+div.Instruction{
+    font-size: 12px;
+
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import './cuisine.css';
 
 function Chinese({}) {
 	const [chinese, setChinese] = useState([]);
@@ -17,7 +18,6 @@ function Chinese({}) {
 			})
 			.then((data) => {
 				setChinese(data.results);
-				console.log(data);
 			})
 			.catch((err) => {
 				console.log(err);
@@ -25,7 +25,7 @@ function Chinese({}) {
 	};
 
 	return (
-		<div>
+		<div className='cuisine'>
 			{chinese.map((data) => {
 				return (
 					<div className='CuisineContainer'>
