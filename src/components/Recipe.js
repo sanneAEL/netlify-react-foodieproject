@@ -28,15 +28,17 @@ function Recipe() {
 
 			<h3 className='extendedIngredients'> Ingredient list</h3>
 
-			{/* {recipe.extendedIngredients.map((ingredient, index) => (
-				<div key={index}>
-					<li key={ingredient.name}>{ingredient.original}</li>
-				</div>
-			))} */}
+			{recipe &&
+				recipe.extendedIngredients &&
+				recipe.extendedIngredients.map((ingredient, index) => (
+					<div key={index}>
+						<li key={ingredient.name}>{ingredient.original}</li>
+					</div>
+				))}
 
 			<div className='Instruction'>
 				<h3 className='Instruction'>Instruction: </h3>
-				<p>{recipe.instructions}</p>
+				<h2 dangerouslySetInnerHTML={{ __html: recipe.instructions }}></h2>
 			</div>
 		</div>
 	);
